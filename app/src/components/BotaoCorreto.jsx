@@ -1,36 +1,40 @@
-function BotaoCorreto({pergunta, Responder}){
+function BotaoCorreto({progress,id}){
 
-    const respostasCorretas = {
-        1: "1",
-        2: "3"
+    const data = [
+        {
+            1:
+            {
+                1:
+                {
+                    canClick:true,
+                    correct:false,
+                    content:"essa aq ta correta"
+                }
+        },
+
     }
+    ];
+
     
-    function handleEscolha(opcao) {
-        const AltCorreta = String(opcao) === String(respostasCorretas[pergunta]);
-        Responder(AltCorreta);
+    function handleEscolha(progress,id) {
+        if (data[progress][id].canClick){
+            const AltCorreta = data[progress][id].correct;
+            Responder(AltCorreta);
+        }
     }
-    
-    switch(pergunta){
-        case 1:
-            return(
-            <div className=".grid-alternativas">
-                <button className="text-button" onClick={() => handleEscolha("1")}>Alt 1</button>
-                <button className="text-button" onClick={() => handleEscolha("2")}>Alt 2</button>
-                <button className="text-button" onClick={() => handleEscolha("3")}>Alt 3</button>
-                <button className="text-button" onClick={() => handleEscolha("4")}>Alt 4</button>
-            </div>
-            );
-        case 2:
-            return(
-            <div className=".grid-alternativas">
-                <button className="text-button"onClick={() => handleEscolha("1")}>Resposta Correta</button>
-                <button className="text-button"onClick={() => handleEscolha("2")}>Me escolhe</button>
-                <button className="text-button"onClick={() => handleEscolha("3")}>Sou a terceira</button>
-                <button className="text-button"onClick={() => handleEscolha("4")}>é a de cima</button>
-            </div>);
-        default:
-            return (<div>Fim das perguntas!</div>);
+    if(data[progress][id].canClick) {
+        if (id < 5){
+            const classe = "text-button";
+        } else if (id > 4) {
+            const classe = "hiding";
+        } return (
+        <button className={classe} onClick={() => handleEscolha(progress,id)}>{data[progress][id].content}</button>
+    );
+    }else {
+        return (
+            <p>{data[progress][id].content}</p>
+        );
     }
-}
+    }
 
 export default BotaoCorreto;

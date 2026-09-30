@@ -1,10 +1,8 @@
 import { useState } from "react"
 import BotaoCorreto from "./BotaoCorreto";
 
-function PerguntasComponent(){
+function PerguntasComponent({progress}){
 
-    const [pergunta,setPergunta] = useState(1);
-    const [resposta,setResposta] = useState(null);
     const enunciados = {
         1: "Escolha a primeira alternativa",
         2: "Essa é a terceira"
