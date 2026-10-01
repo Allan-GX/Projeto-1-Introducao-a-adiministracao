@@ -1,40 +1,47 @@
 function BotaoCorreto({progress,setProgress,id}){
 
     const data = [
-        {
-            1:
-            {
-                1:
-                {
-                    canClick:true,
-                    correct:false,
-                    content:"essa aq ta correta"
-                }
+    {
+        1: {
+            1: { canClick: true, correct: false, content: "Primeira alternativa da questão 1" },
+            2: { canClick: true, correct: true, content: "Segunda alternativa da questão 1" },
+            3: { canClick: true, correct: false, content: "Terceira alternativa da questão 1" },
+            4: { canClick: true, correct: false, content: "Quarta alternativa da questão 1" },
+            5: { canClick: false, correct: false, content: "1"}
         },
-
+        2: {
+            1: { canClick: true, correct: true, content: "Primeira alternativa da questão 2" },
+            2: { canClick: true, correct: false, content: "Segunda alternativa da questão 2" },
+            3: { canClick: true, correct: false, content: "Terceira alternativa da questão 2" },
+            4: { canClick: true, correct: false, content: "Quarta alternativa da questão 2" }
+        }
     }
     ];
 
+    const item_data = data[0][progress][id];
+
     
-    function handleEscolha(progress,id) {
-        if (data[progress][id].canClick){
-            const AltCorreta = data[progress][id].correct;
+    function handleEscolha() {
+        if (item_data.canClick){
+            const AltCorreta = item_data.correct;
             if (AltCorreta){
-                setProgress +=1;
+                console.log("chegou aq");
+                setProgress(progress + 1);
             }
         }
     }
-    if(data[progress][id].canClick) {
+    if(item_data.canClick) {
+        let classe = ""
         if (id < 5){
-            const classe = "text-button";
+            classe = "text-button";
         } else if (id > 4) {
-            const classe = "hiding";
+            classe = "hiding";
         } return (
-        <button className={classe} onClick={() => handleEscolha(progress,id)}>{data[progress][id].content}</button>
+        <button className={classe} onClick={() => handleEscolha()}>{item_data.content}</button>
     );
     }else {
         return (
-            <p>{data[progress][id].content}</p>
+            <p>funcionou</p>
         );
     }
     }
