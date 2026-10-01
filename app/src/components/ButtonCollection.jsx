@@ -10,3 +10,4 @@ const Collection = ({progress,setProgress}) => {
             </div>
     );
 }
+export default Collection;
