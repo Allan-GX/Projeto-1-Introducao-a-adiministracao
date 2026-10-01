@@ -1,4 +1,4 @@
-function BotaoCorreto({progress,id}){
+function BotaoCorreto({progress,setProgress,id}){
 
     const data = [
         {
@@ -19,7 +19,9 @@ function BotaoCorreto({progress,id}){
     function handleEscolha(progress,id) {
         if (data[progress][id].canClick){
             const AltCorreta = data[progress][id].correct;
-            Responder(AltCorreta);
+            if (AltCorreta){
+                setProgress +=1;
+            }
         }
     }
     if(data[progress][id].canClick) {
