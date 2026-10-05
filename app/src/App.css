@@ -14,10 +14,10 @@ body{
     font-family: sans-serif;
 }
 
-.numero-questao {
+.question-number {
     position: absolute;
-    top: 0;
-    left: 10px;
+    top: 20px;
+    left: 15px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -75,7 +75,7 @@ body{
     transform: scale(0.95);
 }
 
-.secret-button {
+.hiding {
     background: none;
     border: none;
     padding: 0;
@@ -92,8 +92,8 @@ body{
 
 .rodape{
     position: absolute;
-    bottom: 0;         /* Cola ao fundo da tela */
-    right: 0;          /* Cola à direita (muda para 'left: 0' se quiseres à esquerda) */
+    bottom: 0;
+    right: 0;
     margin: 0;
     padding: 10px;
 }

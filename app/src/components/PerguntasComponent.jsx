@@ -9,7 +9,7 @@ function PerguntasComponent({progress,setProgress}){
     };
     return (
         <>
-            <BotaoCorreto progress={progress} id={5} setProgress={setProgress}/>
+            <BotaoCorreto className="numero-questao" progress={progress} id={5} setProgress={setProgress}/>
             <h2 className="enunciado">{enunciados[progress]}</h2>
         </>
     );

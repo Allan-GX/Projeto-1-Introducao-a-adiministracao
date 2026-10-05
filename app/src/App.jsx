@@ -14,7 +14,7 @@ function App() {
           <PerguntasComponent progress={progress} setProgress={setProgress}/>
           <Collection progress={progress} setProgress={setProgress}/>
         </section>
-        <CreditoComponent></CreditoComponent>
+        <CreditoComponent progress={progress} setProgress={setProgress}/>
       </section>
 
       <section>

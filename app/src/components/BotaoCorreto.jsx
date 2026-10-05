@@ -3,17 +3,26 @@ function BotaoCorreto({progress,setProgress,id}){
     const data = [
     {
         1: {
-            1: { canClick: true, correct: false, content: "Primeira alternativa da questão 1" },
-            2: { canClick: true, correct: true, content: "Segunda alternativa da questão 1" },
-            3: { canClick: true, correct: false, content: "Terceira alternativa da questão 1" },
-            4: { canClick: true, correct: false, content: "Quarta alternativa da questão 1" },
-            5: { canClick: false, correct: false, content: "1"}
+            1: { canClick: true, correct: false, content: "Padrão questão resposta na alternativa 2" },
+            2: { canClick: true, correct: true, content: "Resposta Certa" },
+            3: { canClick: true, correct: false, content: "Padrão questão resposta na alternativa 2" },
+            4: { canClick: true, correct: false, content: "Padrão questão resposta na alternativa 2" },
+            5: { canClick: true, correct: false, content: "1."},
+            6: { canClick: true, correct: false, content: "Todos"},
+            7: { canClick: true, correct: false, content: "Allan Gabryel"},
+            8: { canClick: true, correct: false, content: "Miro Machdo"},
+            9: { canClick: true, correct: false, content: "2026"}
         },
         2: {
-            1: { canClick: true, correct: true, content: "Primeira alternativa da questão 2" },
-            2: { canClick: true, correct: false, content: "Segunda alternativa da questão 2" },
-            3: { canClick: true, correct: false, content: "Terceira alternativa da questão 2" },
-            4: { canClick: true, correct: false, content: "Quarta alternativa da questão 2" }
+            1: { canClick: true, correct: false, content: "Resposta numero da questão" },
+            2: { canClick: true, correct: false, content: "Resposta numero da questão" },
+            3: { canClick: true, correct: false, content: "Resposta numero da questão" },
+            4: { canClick: true, correct: false, content: "Resposta numero da questão" },
+            5: { canClick: true, correct: true, content: "2"},
+            6: { canClick: true, correct: false, content: "Todos"},
+            7: { canClick: true, correct: false, content: "Allan Gabryel"},
+            8: { canClick: true, correct: false, content: "Miro Machdo"},
+            9: { canClick: true, correct: false, content: "2026"}
         }
     }
     ];
@@ -34,14 +43,16 @@ function BotaoCorreto({progress,setProgress,id}){
         let classe = ""
         if (id < 5){
             classe = "text-button";
-        } else if (id > 4) {
+        } else if (id == 5) {
+            classe = "question-number";
+        } else if (id > 5) {
             classe = "hiding";
         } return (
         <button className={classe} onClick={() => handleEscolha()}>{item_data.content}</button>
     );
     }else {
         return (
-            <p>funcionou</p>
+            <p></p>
         );
     }
     }
