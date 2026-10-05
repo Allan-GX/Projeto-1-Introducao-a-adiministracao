@@ -1,33 +1,49 @@
-function BotaoCorreto({pergunta, Responder}){
+function BotaoCorreto({progress,setProgress,id}){
 
-    const respostasCorretas = {
-        1: "1",
-        2: "3"
+    const data = [
+    {
+        1: {
+            1: { canClick: true, correct: false, content: "Primeira alternativa da questão 1" },
+            2: { canClick: true, correct: true, content: "Segunda alternativa da questão 1" },
+            3: { canClick: true, correct: false, content: "Terceira alternativa da questão 1" },
+            4: { canClick: true, correct: false, content: "Quarta alternativa da questão 1" },
+            5: { canClick: false, correct: false, content: "1"}
+        },
+        2: {
+            1: { canClick: true, correct: true, content: "Primeira alternativa da questão 2" },
+            2: { canClick: true, correct: false, content: "Segunda alternativa da questão 2" },
+            3: { canClick: true, correct: false, content: "Terceira alternativa da questão 2" },
+            4: { canClick: true, correct: false, content: "Quarta alternativa da questão 2" }
+        }
     }
-    
-    function handleEscolha(opcao) {
-        const AltCorreta = String(opcao) === String(respostasCorretas[pergunta]);
-        Responder(AltCorreta);
-    }
-    
-    switch(pergunta){
-        case 1:
-            return<div className=".grid-alternativas">
-                <button className="text-button" onClick={() => handleEscolha("1")}>Alt 1</button>
-                <button className="text-button" onClick={() => handleEscolha("2")}>Alt 2</button>
-                <button className="text-button" onClick={() => handleEscolha("3")}>Alt 3</button>
-                <button className="text-button" onClick={() => handleEscolha("4")}>Alt 4</button>
-            </div>
-        case 2:
-            return<div className=".grid-alternativas">
-                <button className="text-button"onClick={() => handleEscolha("1")}>Resposta Correta</button>
-                <button className="text-button"onClick={() => handleEscolha("2")}>Me escolhe</button>
-                <button className="text-button"onClick={() => handleEscolha("3")}>Sou a terceira</button>
-                <button className="text-button"onClick={() => handleEscolha("4")}>é a de cima</button>
-            </div>
-        default:
-            return <div>Fim das perguntas!</div>;
-    }
-}
+    ];
 
-export default BotaoCorreto
+    const item_data = data[0][progress][id];
+
+    
+    function handleEscolha() {
+        if (item_data.canClick){
+            const AltCorreta = item_data.correct;
+            if (AltCorreta){
+                console.log("chegou aq");
+                setProgress(progress + 1);
+            }
+        }
+    }
+    if(item_data.canClick) {
+        let classe = ""
+        if (id < 5){
+            classe = "text-button";
+        } else if (id > 4) {
+            classe = "hiding";
+        } return (
+        <button className={classe} onClick={() => handleEscolha()}>{item_data.content}</button>
+    );
+    }else {
+        return (
+            <p>funcionou</p>
+        );
+    }
+    }
+
+export default BotaoCorreto;
