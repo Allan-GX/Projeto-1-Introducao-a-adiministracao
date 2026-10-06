@@ -1,22 +1,17 @@
+import BotaoCorreto from "./BotaoCorreto";
 
-
-function CreditoComponent(){
-
-    function handleSubmit(e){
-        e.preventDefault();
-        console.log("Funciona?");
-    }
+function CreditoComponent({progress,setProgress}){
 
     return (
     <div className="rodape">
         <p>
-            <button className="secret-button" onClick={handleSubmit}>Todos</button>
+            <BotaoCorreto progress={progress} id={6} setProgress={setProgress}/>
             {" "}os direitos reservados a{" "}
-            <button className="secret-button" onClick={handleSubmit}>Allan Gabryel</button>
+            <BotaoCorreto progress={progress} id={7} setProgress={setProgress}/>
             {" "}e{" "}
-            <button className="secret-button" onClick={handleSubmit}>Miro Machado</button>
+            <BotaoCorreto progress={progress} id={8} setProgress={setProgress}/>
             {" "}-{" "}
-            <button className="secret-button" onClick={handleSubmit}>2026</button>
+            <BotaoCorreto progress={progress} id={9} setProgress={setProgress}/>
         </p>
     </div>
     );
