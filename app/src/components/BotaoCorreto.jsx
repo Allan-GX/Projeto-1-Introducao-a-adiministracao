@@ -10,7 +10,7 @@ function BotaoCorreto({progress,setProgress,id}){
             5: { canClick: true, correct: false, content: "1."},
             6: { canClick: true, correct: false, content: "Todos"},
             7: { canClick: true, correct: false, content: "Allan Gabryel"},
-            8: { canClick: true, correct: false, content: "Miro Machdo"},
+            8: { canClick: true, correct: false, content: "Miro Machado"},
             9: { canClick: true, correct: false, content: "2026"}
         },
         2: {
@@ -21,7 +21,7 @@ function BotaoCorreto({progress,setProgress,id}){
             5: { canClick: true, correct: true, content: "2"},
             6: { canClick: true, correct: false, content: "Todos"},
             7: { canClick: true, correct: false, content: "Allan Gabryel"},
-            8: { canClick: true, correct: false, content: "Miro Machdo"},
+            8: { canClick: true, correct: false, content: "Miro Machado"},
             9: { canClick: true, correct: false, content: "2026"}
         }
     }
