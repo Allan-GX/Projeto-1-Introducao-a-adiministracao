@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Sobre from "./SobreoquizComponent";
+import Titulo from "../assets/Tituloquiz.png"
 
 function Inicio({progress,setProgress}){
     const [sobrevis,setSobrevis] = useState(0);
@@ -17,10 +18,10 @@ function Inicio({progress,setProgress}){
 
     if (progress === 0){
     return (
-        <div>
-            <h1>nome do quiz</h1>
-            <button onClick={handleJogar}>jogar</button>
-            <button onClick={handleClick}>sobre o quiz</button>
+        <div className="quiz-container">
+            <img src={Titulo} alt="TDquiz" className="imagem"/>
+            <button className="hub-button" onClick={handleJogar}>Jogar</button>
+            <button className="hub-button" onClick={handleClick}>Sobre</button>
             <Sobre vis={sobrevis}/>
         </div>);
     } else {
