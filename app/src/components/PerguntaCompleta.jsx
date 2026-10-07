@@ -1,7 +1,7 @@
 import PerguntasComponent from './PerguntasComponent'
 import Collection from './ButtonCollection';
 const Pergunta = ({progress,setProgress}) => {
-    if (progress > 0){
+    if (progress > 0 && progress < 3){
         return (
             <section className='quiz-conteiner'>
             <PerguntasComponent progress={progress} setProgress={setProgress}/>

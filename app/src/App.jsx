@@ -5,9 +5,11 @@ import PerguntasComponent from './components/PerguntasComponent'
 import Collection from './components/ButtonCollection';
 import Pergunta from './components/PerguntaCompleta';
 import Inicio from './components/TelaInicialComponent';
+import Fim from './components/TelaFinalComponent';
 
 function App() {
   const [progress,setProgress] = useState(0);
+  console.log(progress);
 
   return (
     <>
@@ -20,6 +22,7 @@ function App() {
       </main>
 
       <section>
+        <Fim progress={progress} setProgress={setProgress}/>
       </section>
       </>
   )
