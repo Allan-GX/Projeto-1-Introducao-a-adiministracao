@@ -6,6 +6,7 @@ import Collection from './components/ButtonCollection';
 import Pergunta from './components/PerguntaCompleta';
 import Inicio from './components/TelaInicialComponent';
 import Fim from './components/TelaFinalComponent';
+import Erro from './components/TelaDeErroComponent';
 
 function App() {
   const [progress,setProgress] = useState(0);
@@ -23,6 +24,7 @@ function App() {
 
       <section>
         <Fim progress={progress} setProgress={setProgress}/>
+        <Erro progress={progress} setProgress={setProgress}/>
       </section>
       </>
   )

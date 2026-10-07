@@ -7,7 +7,7 @@ function BotaoCorreto({progress,setProgress,id}){
             8: { canClick: false, correct: false, content: "Miro Machado"},
             9: { canClick: false, correct: false, content: "2026"}
         },
-        {
+        /*1*/{
             1: { canClick: true, correct: false, content: "Padrão questão resposta na alternativa 2" },
             2: { canClick: true, correct: true, content: "Resposta Certa" },
             3: { canClick: true, correct: false, content: "Padrão questão resposta na alternativa 2" },
@@ -23,7 +23,7 @@ function BotaoCorreto({progress,setProgress,id}){
             2: { canClick: true, correct: false, content: "Resposta numero da questão" },
             3: { canClick: true, correct: false, content: "Resposta numero da questão" },
             4: { canClick: true, correct: false, content: "Resposta numero da questão" },
-            5: { canClick: true, correct: true, content: "2"},
+            5: { canClick: true, correct: true, content: "2."},
             6: { canClick: false, correct: false, content: "Todos"},
             7: { canClick: false, correct: false, content: "Allan Gabryel"},
             8: { canClick: false, correct: false, content: "Miro Machado"},
@@ -41,7 +41,7 @@ function BotaoCorreto({progress,setProgress,id}){
                 console.log("chegou aq");
                 setProgress(progress + 1);
             }else {
-                setProgress(0);
+                setProgress(67);
             }
         }
     }
