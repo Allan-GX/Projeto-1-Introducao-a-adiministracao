@@ -1,11 +1,13 @@
 import PerguntasComponent from './PerguntasComponent'
 import Collection from './ButtonCollection';
-const Pergunta = ({progress,setProgress}) => {
+
+const Pergunta = ({progress,acerto,simple,setAcerto,setProgress}) => {
+
     if (progress > 0 && progress < 3){
         return (
             <section className='quiz-conteiner'>
-            <PerguntasComponent progress={progress} setProgress={setProgress}/>
-            <Collection progress={progress} setProgress={setProgress}/>
+                <PerguntasComponent progress={progress} acerto={acerto} simple={simple} setAcerto={setAcerto} setProgress={setProgress}/>
+                <Collection progress={progress} acerto={acerto} setAcerto={setAcerto} simple={simple} setProgress={setProgress}/>
             </section>
         );
     } else {
@@ -15,4 +17,5 @@ const Pergunta = ({progress,setProgress}) => {
         );
     }
 }
+
 export default Pergunta;

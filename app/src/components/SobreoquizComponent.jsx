@@ -7,6 +7,8 @@ function Sobre ({vis}){
                     terá que acertar todas as 20 perguntas 
                     sequencialmente sem errar nenhuma vez, e caso erre voltará do inicio.
                     Então se divirta e fique atento as alternativas.
+                    Caso o quiz acabar sendo muito dificil ou você apenas quiser jogar vendo seus acertos e erros,
+                    ative o modo simples.
                     Boa sorte!!!
                 </p>
             </div>);

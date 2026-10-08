@@ -1,7 +1,7 @@
 import { useState } from "react"
 import BotaoCorreto from "./BotaoCorreto";
 
-function PerguntasComponent({progress,setProgress}){
+function PerguntasComponent({progress,simple,acerto,setAcerto,setProgress}){
 
     const enunciados = {
         1: "Escolha a primeira alternativa",
@@ -9,7 +9,7 @@ function PerguntasComponent({progress,setProgress}){
     };
     return (
         <>
-            <BotaoCorreto className="numero-questao" progress={progress} id={5} setProgress={setProgress}/>
+            <BotaoCorreto className="numero-questao" progress={progress} simple={simple} acerto={acerto} setAcerto={setAcerto} id={5} setProgress={setProgress}/>
             <h2 className="enunciado">{enunciados[progress]}</h2>
         </>
     );
