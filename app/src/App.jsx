@@ -10,21 +10,22 @@ import Erro from './components/TelaDeErroComponent';
 
 function App() {
   const [progress,setProgress] = useState(0);
-  console.log(progress);
+  const [simple,setSimple] = useState(0);
+  const [acerto,setAcerto] = useState(0);
 
   return (
     <>
       <header>
-        <Inicio progress={progress} setProgress={setProgress}/>
+        <Inicio progress={progress} simple={simple} setSimple={setSimple} setProgress={setProgress}/>
       </header>
       <main>
-        <Pergunta progress={progress} setProgress={setProgress}/>
-        <CreditoComponent progress={1} setProgress={setProgress}/>
+        <Pergunta progress={progress} acerto={acerto} setAcerto={setAcerto}simple={simple} setProgress={setProgress}/>
+        <CreditoComponent progress={progress} setAcerto={setAcerto} acerto={acerto} simple={simple} setProgress={setProgress}/>
       </main>
 
       <section>
-        <Fim progress={progress} setProgress={setProgress}/>
-        <Erro progress={progress} setProgress={setProgress}/>
+        <Fim progress={progress} acerto={acerto} setAcerto={setAcerto} setSimple={setSimple} setProgress={setProgress}/>
+        <Erro progress={progress} setAcerto={setAcerto} setProgress={setProgress}/>
       </section>
       </>
   )
