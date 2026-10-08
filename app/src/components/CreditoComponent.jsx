@@ -1,4 +1,4 @@
-import BotaoCorreto from "./BotaoCorreto";
+import Opcao from "./BotaoCorreto";
 
 function CreditoComponent({progress,simple,acerto,setAcerto,setProgress}){
 
@@ -12,13 +12,13 @@ function CreditoComponent({progress,simple,acerto,setAcerto,setProgress}){
     return (
     <div className="rodape">
         <p>
-            <BotaoCorreto progress={handleProgress()} acerto={acerto} setAcerto={setAcerto} simple={simple} id={6} setProgress={setProgress}/>
+            <Opcao progress={handleProgress()} acerto={acerto} setAcerto={setAcerto} simple={simple} id={6} setProgress={setProgress}/>
             {" "}os direitos reservados a{" "}
-            <BotaoCorreto progress={handleProgress()} acerto={acerto} setAcerto={setAcerto} simple={simple} id={7} setProgress={setProgress}/>
+            <Opcao progress={handleProgress()} acerto={acerto} setAcerto={setAcerto} simple={simple} id={7} setProgress={setProgress}/>
             {" "}e{" "}
-            <BotaoCorreto progress={handleProgress()} acerto={acerto} setAcerto={setAcerto} simple={simple} id={8} setProgress={setProgress}/>
+            <Opcao progress={handleProgress()} acerto={acerto} setAcerto={setAcerto} simple={simple} id={8} setProgress={setProgress}/>
             {" "}-{" "}
-            <BotaoCorreto progress={handleProgress()} acerto={acerto} setAcerto={setAcerto} simple={simple} id={9} setProgress={setProgress}/>
+            <Opcao progress={handleProgress()} acerto={acerto} setAcerto={setAcerto} simple={simple} id={9} setProgress={setProgress}/>
         </p>
     </div>
     );
