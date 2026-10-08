@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Sobre from "./SobreoquizComponent";
 import Titulo from "../assets/Tituloquiz.png"
+import SimpleToggle from "./SimpleMode";
 
-function Inicio({progress,setProgress}){
+function Inicio({progress,setProgress, simple, setSimple}){
     const [sobrevis,setSobrevis] = useState(0);
 
     function handleClick(){
@@ -21,6 +22,7 @@ function Inicio({progress,setProgress}){
         <div className="quiz-container">
             <img src={Titulo} alt="TDquiz" className="imagem"/>
             <button className="hub-button" onClick={handleJogar}>Jogar</button>
+            <SimpleToggle simple={simple} setSimple={setSimple}/>
             <button className="hub-button" onClick={handleClick}>Sobre</button>
             <Sobre vis={sobrevis}/>
         </div>);

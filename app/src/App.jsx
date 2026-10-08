@@ -10,12 +10,12 @@ import Erro from './components/TelaDeErroComponent';
 
 function App() {
   const [progress,setProgress] = useState(0);
-  console.log(progress);
+  const [simple,setSimple] = useState(0);
 
   return (
     <>
       <header>
-        <Inicio progress={progress} setProgress={setProgress}/>
+        <Inicio progress={progress} simple={simple} setSimple={setSimple} setProgress={setProgress}/>
       </header>
       <main>
         <Pergunta progress={progress} setProgress={setProgress}/>
