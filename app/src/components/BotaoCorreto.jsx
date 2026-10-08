@@ -1,4 +1,4 @@
-function BotaoCorreto({progress,setProgress,id,simple, acerto,setAcerto}){
+function Opcao({progress,setProgress,id,simple, acerto,setAcerto}){
 
     const data = [
         {
@@ -71,4 +71,4 @@ function BotaoCorreto({progress,setProgress,id,simple, acerto,setAcerto}){
     }
     }
 
-export default BotaoCorreto;
+export default Opcao;
