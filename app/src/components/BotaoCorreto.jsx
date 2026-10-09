@@ -119,10 +119,10 @@ function Opcao({progress,setProgress,id,simple, acerto,setAcerto}){
             9: { canClick: false, correct: false, content: "2026"}
         },
         {
-            1: { canClick: true, correct: false, content: "Tony Stark" },
-            2: { canClick: true, correct: true, content: "Lex Luthor" },
-            3: { canClick: true, correct: false, content: "Elon Musk" },
-            4: { canClick: true, correct: false, content: "João Nicolas" },
+            1: { canClick: true, correct: false, content: "Clarice Linspector" },
+            2: { canClick: true, correct: true, content: "Chico Buarque" },
+            3: { canClick: true, correct: false, content: "Drummond" },
+            4: { canClick: true, correct: false, content: "Machado de Assis" },
             5: { canClick: false, correct: false, content: "11."},
             6: { canClick: false, correct: false, content: "Todos"},
             7: { canClick: false, correct: false, content: "Allan Gabryel"},

@@ -13,7 +13,7 @@ function PerguntasComponent({progress,simple,acerto,setAcerto,setProgress}){
         "Quem é o pai da computação?",
         "Qual. o. nome. do. protagonista. do. anime. Naruto.",
         "Qual arma é geralmente atrelada a classe bárbaro em rpgs?",
-        "Qual o nome do homem mais rico da dc?",
+        "'Meu cavalo não sabe falar ingles' a quem esta frase pertence??",
         "Qual a maior montanha existente do chão até o topo?",
         "Estamos em qual questão? esqueci...",
         "Qual o 527° ano bissexto?",
