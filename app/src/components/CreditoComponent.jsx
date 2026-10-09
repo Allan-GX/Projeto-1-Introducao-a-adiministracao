@@ -3,7 +3,7 @@ import BotaoCorreto from "./BotaoCorreto";
 function CreditoComponent({progress,simple,acerto,setAcerto,setProgress}){
 
     const handleProgress = () => {
-        if (progress >=3){
+        if (progress >=4){
             return 1;
         } else {
             return progress;

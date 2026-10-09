@@ -5,7 +5,8 @@ function PerguntasComponent({progress,simple,acerto,setAcerto,setProgress}){
 
     const enunciados = {
         1: "Escolha a primeira alternativa",
-        2: "Essa é a terceira"
+        2: "Essa é a terceira",
+        3: "Terceira pergunta"
     };
     return (
         <>
