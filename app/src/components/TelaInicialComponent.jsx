@@ -22,7 +22,7 @@ function Inicio({progress,setProgress, simple, setSimple}){
     if (progress === 0){
         return (
             <div className="quiz-container">
-                <img src={Titulo} alt="TDquiz" className="imagem"/>
+                <img src={Titulo} alt="TDquiz" className="imagemTitulo"/>
                 <button className="hub-button" onClick={handleJogar}>Jogar</button>
                 <SimpleToggle simple={simple} setSimple={setSimple}/>
                 <button className="hub-button" onClick={handleClick}>Sobre</button>

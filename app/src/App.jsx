@@ -8,6 +8,7 @@ import Inicio from './components/TelaInicialComponent';
 import Fim from './components/TelaFinalComponent';
 import Erro from './components/TelaDeErroComponent';
 import Stars from './components/StarTracker';
+import Music from './components/MusicComponent';
 
 function App() {
   const [progress,setProgress] = useState(0);
@@ -27,7 +28,8 @@ function App() {
 
       <section>
         <Fim progress={progress} acerto={acerto} setAcerto={setAcerto} setSimple={setSimple} setProgress={setProgress}/>
-        <Erro progress={progress} setAcerto={setAcerto} setProgress={setProgress}/>
+        <Erro progress={progress} acerto={acerto} setAcerto={setAcerto} setProgress={setProgress}/>
+        <Music></Music>
       </section>
       </>
   )
