@@ -8,6 +8,7 @@ import Inicio from './components/TelaInicialComponent';
 import Fim from './components/TelaFinalComponent';
 import Erro from './components/TelaDeErroComponent';
 import Stars from './components/StarTracker';
+import Music from './components/MusicComponent';
 
 function App() {
   const [progress,setProgress] = useState(0);
@@ -21,13 +22,14 @@ function App() {
       </header>
       <main>
         <Pergunta progress={progress} acerto={acerto} setAcerto={setAcerto}simple={simple} setProgress={setProgress}/>
-        <Stars acerto={acerto}/>
+        {progress != 13 && progress != 22 && progress != 67 ? <Stars acerto={acerto}/> : null}
         <CreditoComponent progress={progress} setAcerto={setAcerto} acerto={acerto} simple={simple} setProgress={setProgress}/>
       </main>
 
       <section>
         <Fim progress={progress} acerto={acerto} setAcerto={setAcerto} setSimple={setSimple} setProgress={setProgress}/>
-        <Erro progress={progress} setAcerto={setAcerto} setProgress={setProgress}/>
+        <Erro progress={progress} acerto={acerto} setAcerto={setAcerto} setProgress={setProgress}/>
+        <Music></Music>
       </section>
       </>
   )

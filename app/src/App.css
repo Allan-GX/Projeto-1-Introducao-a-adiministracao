@@ -91,6 +91,28 @@ button {
     box-sizing: border-box;
 }
 
+.music-button {
+    display: inline-flex;
+    align-items: center;
+    background-color:#8f8f8f;
+    color:#000000;
+    border: 4px solid #2e2e2e;
+    border-radius: 15px;
+    padding: 15px 15px;
+    margin: 5px;
+    font-size: 20px;
+    font-family: "Chewy", system-ui;
+    cursor: pointer;
+    text-align: center;
+    width: 10%; 
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    margin: 1;
+    padding: 1%;
+}
+
 .hub-button:hover {
     filter: brightness(1.1);
 }
@@ -104,6 +126,14 @@ button {
 }
 
 .text-button:active {
+    transform: scale(0.95);
+}
+
+.music-button:hover {
+    filter: brightness(1.1);
+}
+
+.music-button:active {
     transform: scale(0.95);
 }
 
@@ -164,7 +194,12 @@ button {
     font-size: 28px;
 }
 
-.imagem{
+.imagemTitulo{
     max-width: 300px;
     margin-bottom: 20px;
+}
+
+.imagemMusica{
+    max-width: 30px;
+    padding: 10px;
 }

@@ -11,9 +11,9 @@ function Fim({progress,acerto,setAcerto,setSimple, setProgress}){
     if (progress == 22){
         return (
             <div className="quiz-container">
-                <img src={Titulo} alt="TDquiz" className="imagem"/>
+                <img src={Titulo} alt="TDquiz" className="imagemTitulo"/>
                 <h1>Parabéns por concluir o nosso quiz!</h1>
-                <p>você acertou {acerto} questões!</p>
+                <h2>você acertou {acerto} questões!</h2>
                 <p className="agradecimento">Agradecemos por jogar nosso quiz! <br/> caso queira jogar
                     novamente <br/> basta clicar no botão abaixo.
                 </p>
