@@ -3,7 +3,13 @@ import Collection from './ButtonCollection';
 
 const Pergunta = ({progress,acerto,simple,setAcerto,setProgress}) => {
 
-    if (progress > 0 && progress < 4){
+    function secreto(){
+        if (progress == 19){
+            console.log("psst, é a variável progress");
+        }
+    }
+    if (progress > 0 && progress < 22){
+        secreto();
         return (
             <section className='quiz-conteiner'>
                 <PerguntasComponent progress={progress} acerto={acerto} simple={simple} setAcerto={setAcerto} setProgress={setProgress}/>
