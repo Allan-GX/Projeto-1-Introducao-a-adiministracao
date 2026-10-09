@@ -22,7 +22,7 @@ function App() {
       </header>
       <main>
         <Pergunta progress={progress} acerto={acerto} setAcerto={setAcerto}simple={simple} setProgress={setProgress}/>
-        <Stars acerto={acerto}/>
+        {progress != 13 && progress != 22 && progress != 67 ? <Stars acerto={acerto}/> : null}
         <CreditoComponent progress={progress} setAcerto={setAcerto} acerto={acerto} simple={simple} setProgress={setProgress}/>
       </main>
 
