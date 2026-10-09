@@ -99,8 +99,8 @@ function Opcao({progress,setProgress,id,simple, acerto,setAcerto}){
         {
             1: { canClick: true, correct: false, content: "Sasuke" },
             2: { canClick: true, correct: false, content: "Goku" },
-            3: { canClick: true, correct: false, content: "Naruto" },
-            4: { canClick: true, correct: true, content: "Nagato" },
+            3: { canClick: true, correct: true, content: "Naruto" },
+            4: { canClick: true, correct: false, content: "Nagato" },
             5: { canClick: false, correct: false, content: "9."},
             6: { canClick: false, correct: false, content: "Todos"},
             7: { canClick: false, correct: false, content: "Allan Gabryel"},
@@ -160,7 +160,7 @@ function Opcao({progress,setProgress,id,simple, acerto,setAcerto}){
             6: { canClick: false, correct: false, content: "Todos"},
             7: { canClick: false, correct: false, content: "Allan Gabryel"},
             8: { canClick: false, correct: false, content: "Miro Machado"},
-            9: { canClick: true, correct: true, content: "2026"}
+            9: { canClick: true, correct: true, content: "2028"}
         },
         {
             1: { canClick: true, correct: false, content: "5" },
@@ -251,7 +251,7 @@ function Opcao({progress,setProgress,id,simple, acerto,setAcerto}){
             setAcerto(acerto + 1);
         }else {
             if (simple){
-                alert("Você errou! ainda pode proseguir");
+                alert("Você errou! ainda pode prosseguir");
                 setProgress(progress + 1);
             } else {
             setProgress(67);

@@ -10,10 +10,10 @@ function PerguntasComponent({progress,simple,acerto,setAcerto,setProgress}){
         "Sabendo que A = true B = true C = false return ( (A && !B) || C) \n qual o retorno?",
         "Qual a diferença entre memoria ram ECC e não ECC?",
         "Qual dessas NÃO É uma característica de um ornintorrinco?",
-        "Qual o nome do criador do método que avalia se uma máquina consegue exibir um comportamento inteligente idêntico a de um humano?",
+        "Quem é o pai da computação?",
         "Qual. o. nome. do. protagonista. do. anime. Naruto.",
         "Qual arma é geralmente atrelada a classe bárbaro em rpgs?",
-        "Qual o nome do homem mais rico do mundo?",
+        "Qual o nome do homem mais rico da dc?",
         "Qual a maior montanha existente do chão até o topo?",
         "Estamos em qual questão? esqueci...",
         "Qual o 527° ano bissexto?",
@@ -26,22 +26,12 @@ function PerguntasComponent({progress,simple,acerto,setAcerto,setProgress}){
         "Questão bonus!! o que a sigla TDquiz significa?",
         "Qual o nome do homem mais rico da dc?"
     ];
-    let enunciado = enunciados[progress - 1];
-    function handleEntrada(){
-        if (progress == 11){
-            enunciado = enunciados[enunciados - 1];
-        }
-    }
-    function handleSaida(){
-        if (progress == 11){
-            enunciado = enunciados[progress - 1];
-        }
-    }
+    const enunciado = enunciados[progress - 1];
     
     return (
         <>
             <Opcao className="numero-questao" progress={progress} simple={simple} acerto={acerto} setAcerto={setAcerto} id={5} setProgress={setProgress}/>
-            <h2 className="enunciado" onMouseEnter={handleEntrada} onMouseLeave={handleSaida}>{enunciado}</h2>
+            <h2 className="enunciado" >{enunciado}</h2>
         </>
     );
 }

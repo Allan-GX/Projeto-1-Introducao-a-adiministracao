@@ -8,7 +8,7 @@ function Fim({progress,acerto,setAcerto,setSimple, setProgress}){
         setProgress(0);
     }
 
-    if (progress == 3){
+    if (progress == 22){
         return (
             <div className="quiz-container">
                 <img src={Titulo} alt="TDquiz" className="imagem"/>

@@ -3,8 +3,8 @@ import Opcao from "./BotaoCorreto";
 function CreditoComponent({progress,simple,acerto,setAcerto,setProgress}){
 
     const handleProgress = () => {
-        if (progress >=3){
-            return 1;
+        if (progress >=22){
+            return 0;
         } else {
             return progress;
         }
