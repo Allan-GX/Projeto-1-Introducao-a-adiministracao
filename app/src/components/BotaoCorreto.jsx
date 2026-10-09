@@ -239,7 +239,8 @@ function Opcao({progress,setProgress,id,simple, acerto,setAcerto}){
             8: { canClick: false, correct: false, content: "Miro Machado"},
             9: { canClick: false, correct: false, content: "2026"}
         }
-        ];
+    /*Sempre que adicionar uma questão, nescessario alterar valores em credito,pergunta completa e tela final*/
+    ];
 
     const item_data = data[progress][id];
 
@@ -270,7 +271,7 @@ function Opcao({progress,setProgress,id,simple, acerto,setAcerto}){
     };
 
     if(item_data.canClick) {
-         return (
+        return (
             <button className={classe()} onClick={() => handleEscolha()}>{item_data.content}</button>
         );
     }else {
